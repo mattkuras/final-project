@@ -1,10 +1,11 @@
 class GuitarsController < ApplicationController
     def index
         @guitars = Guitar.all
-        render json: @guitars
+        render json: @guitars, except: [:updated_at, :created_at]
     end
     def show 
-        @guitar = Guitar.all.find_by(id: params[:id])
+        guitar = Guitar.all.find_by(id: params[:id])
+        render json: guitar, except: [:updated_at, :created_at]
     end
 
 
