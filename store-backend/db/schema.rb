@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_163607) do
+ActiveRecord::Schema.define(version: 2020_07_24_183705) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -27,4 +27,15 @@ ActiveRecord::Schema.define(version: 2020_07_24_163607) do
     t.boolean "in_stock", default: true
   end
 
+  create_table "items", force: :cascade do |t|
+    t.integer "cart_id", null: false
+    t.integer "guitar_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_items_on_cart_id"
+    t.index ["guitar_id"], name: "index_items_on_guitar_id"
+  end
+
+  add_foreign_key "items", "carts"
+  add_foreign_key "items", "guitars"
 end
