@@ -5,14 +5,14 @@ import {fetchGuitars} from './actions/fetchGuitars'
 
 class App extends React.Component {
 
-  componentDidMount(){
-    this.props.fetchGuitars({type: "FETCH_GUITARS", payload: {name:'guitars'}})
-  }
+  // componentDidMount(){
+  //   this.props.fetchGuitars({type: "FETCH_GUITARS", payload: {name:'guitars'}})
+  // }
 
   render() {
     return (
       <div className="App">
-        App
+        <guitarsContainer/>
       </div>
     )
   }
