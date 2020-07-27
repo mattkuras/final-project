@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {fetchGuitars} from './actions/fetchGuitars'
 
 
 class App extends React.Component {
 
   componentDidMount(){
-    fetch("http://localhost:3001/guitars")
-    .then(resp => resp.json())
-    .then(data => console.log(data[0]))
+    this.props.fetchGuitars({type: "FETCH_GUITARS", payload: {name:'guitars'}})
   }
 
   render() {
@@ -18,4 +18,4 @@ class App extends React.Component {
   }
 } 
 
-export default App;
+export default connect(null, {fetchGuitars})(App);
