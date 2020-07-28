@@ -1,15 +1,14 @@
 import React from 'react'
-
+import Guitar from './Guitar'
 
 
 const Guitars = (props) => {
     return (
         <div>
-            {props.guitars.map(guitar => <li key={guitar.id}>
-                {guitar.name} - {guitar.price} <br></br>
+            {props.guitars.map(guitar => <div key={guitar.id}>
+                <Guitar guitar={guitar}/> <br></br>
                 
-                {guitar.description}
-            </li>)}
+            </div>)}
         </div> 
     )
 }
