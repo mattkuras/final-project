@@ -7,12 +7,12 @@ import {fetchGuitars} from '../actions/fetchGuitars'
 class GuitarsContainer extends React.Component {
 
     componentDidMount(){
-        fetchGuitars()
+        this.props.fetchGuitars()
     }
     render (){
         return(
             <div>
-                <Guitars/>
+                <Guitars guitars={this.props.guitars}/>
             </div>
         )
     }
