@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fetchGuitars} from './actions/fetchGuitars'
+import GuitarsContainer from './containers/GuitarsContainer'
 
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <guitarsContainer/>
+        <GuitarsContainer/>
       </div>
     )
   }

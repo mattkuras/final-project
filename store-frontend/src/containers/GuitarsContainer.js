@@ -10,3 +10,5 @@ class GuitarsContainer extends React.Component {
         )
     }
 }
+
+export default GuitarsContainer
