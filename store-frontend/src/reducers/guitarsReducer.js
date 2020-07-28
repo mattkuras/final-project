@@ -1,3 +1,8 @@
 export default function guitarsReducer(state = {guitars: []}, action){
-return state
+    switch(action.type){
+        case 'FETCH_GUITARS':
+            return {guitars: action.payload}
+        default: 
+            return state
+    }
 }
