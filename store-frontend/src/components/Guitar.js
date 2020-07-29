@@ -1,4 +1,6 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
+
 
 const Guitar = (props) => {
 
@@ -6,8 +8,8 @@ const Guitar = (props) => {
     console.log(guitar)
     return(
         <li>
-            {guitar ? guitar.name : null} - {guitar ? guitar.price : null} <br></br> <br></br>
-            {guitar ? guitar.description : null}
+            {guitar ? guitar.name : <Redirect to='/guitars'/>} - {guitar ? guitar.price : <Redirect to='/guitars'/>} <br></br> <br></br>
+            {guitar ? guitar.description : <Redirect to='/guitars'/>}
         </li>
     )
 
