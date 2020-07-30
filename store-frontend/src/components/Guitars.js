@@ -6,8 +6,10 @@ import {addItem} from '../actions/addItem'
 
 
 const Guitars = (props) => {
-    return (
+
+    return ( 
         <div>
+
             {props.guitars.map(guitar => 
             <li key={guitar.id}>
                 <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> <br></br><br></br>
@@ -18,7 +20,7 @@ const Guitars = (props) => {
 }
 const mapStateToProps = state => {
     return {
-        cart: state.cart
+        guitars: state.guitars 
     }
 }
 export default connect(mapStateToProps, {addItem})(Guitars)
