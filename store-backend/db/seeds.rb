@@ -83,3 +83,5 @@ guitar_list = [
 guitar_list.each do |name, description, price, image, instock|
     Guitar.create(name: name, description: description, price: price, image: image, in_stock: instock )
 end
+
+Cart.create()
