@@ -1,3 +1,4 @@
 class Guitar < ApplicationRecord
-    belongs_to :cart, optional: true 
+    has_many :items
+    has_many :carts, through: :items
 end
