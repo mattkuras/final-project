@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import guitarsReducer from './reducers/guitarsReducer'
+import GuitarsReducer from './reducers/GuitarsReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
-
+import rootReducer from "./reducers/index.js"
 import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let store = createStore(guitarsReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(GuitarsReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
