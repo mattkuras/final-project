@@ -8,6 +8,8 @@ export const addItem = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
-        
+        .then(resp => resp.json())
+        .then(item => dispatch({type: 'ADD_ITEM', payload: item}))
+
     }
 }
