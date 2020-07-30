@@ -18,7 +18,7 @@ const Guitars = (props) => {
 }
 const mapStateToProps = state => {
     return {
-        cart: state.cate
+        cart: state.cart
     }
 }
 export default connect(mapStateToProps, {addItem})(Guitars)
