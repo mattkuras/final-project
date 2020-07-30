@@ -8,5 +8,6 @@ export const addItem = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
+        
     }
 }
