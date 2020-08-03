@@ -16,16 +16,14 @@ const Guitars = (props) => {
                 <button onClick={(event) => props.addItem(guitar)} >add to cart</button>
             </li>)}
 
-            <h2>cart</h2> 
-            {props.cart.map(item =>
-                <li key={item.id}>{item.name}</li>)}
+            
         </div> 
     )
 }
 const mapStateToProps = state => {
     return {
         guitars: state.guitars,
-        cart: state.cart 
+ 
     }
 }
 export default connect(mapStateToProps, {addItem})(Guitars)

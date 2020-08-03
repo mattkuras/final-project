@@ -15,7 +15,8 @@ class GuitarsContainer extends React.Component {
             <div>
                 <Switch>
                     <Route exact path='/guitars/:id' render= {(routerProps) =>  <Guitar {...routerProps} guitars={this.props.guitars}/>} />
-                    <Route exact path='/guitars' render= {(routerProps) =>  <Guitars {...routerProps} guitars={this.props.guitars}/>} />   
+                    <Route exact path='/guitars' render= {(routerProps) =>  <Guitars {...routerProps} guitars={this.props.guitars}/>} />
+                    
                 </Switch>
                 
             </div>
@@ -25,7 +26,8 @@ class GuitarsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        guitars: state.guitars
+        guitars: state.guitars,
+        cart: state.cart
     }
 }
 
