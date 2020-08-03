@@ -9,8 +9,9 @@ class ItemsController < ApplicationController
 
     def create
         @item = Item.new(guitar_id: params[:id], cart_id: 1)
+        
         if @item.save 
-            render json: @item 
+            render json: @item.guitar 
         else 
             render json: {error: 'error saving item'}
         end
