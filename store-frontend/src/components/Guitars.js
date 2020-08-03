@@ -8,10 +8,15 @@ import {addItem} from '../actions/addItem'
 const Guitars = (props) => {
 
     return ( 
-        <div>
+        <div className='container'>
 
             {props.guitars.map(guitar => 
             <li key={guitar.id}>
+                <div className='guitarCard'>
+                    <img className='guitarImage' src={guitar.image}/>
+                    <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> <br></br><br></br>
+                </div>
+
                 <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> <br></br><br></br>
                 <button onClick={(event) => props.addItem(guitar)} >add to cart</button>
             </li>)}
