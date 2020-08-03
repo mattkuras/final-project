@@ -15,13 +15,19 @@ export default function guitarsReducer(
                 guitars: action.payload,
                 
             }
+        case 'FETCH_ITEMS':
+            return { 
+                ...state, 
+                cart: action.payload, 
+                
+            }
         case 'ADD_ITEM':
             return {
                 ...state,
-                cartTotalItems: state.cartTotalItems += 1,
+                cartTotalItems: state.cart.length += 1,
                 cartTotalPrice: state.cartTotalPrice + action.payload.price,
-                 guitars: [...state.guitars],
-                cart: [...state.cart, action.payload]
+                guitars: [...state.guitars],
+                // cart: [...state.cart, action.payload]
           }
         default: 
             return state
