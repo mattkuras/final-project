@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fetchGuitars} from './actions/fetchGuitars'
 import GuitarsContainer from './containers/GuitarsContainer'
-import Cart from './components/Cart';
-import Header from "./components/Header";
+import Cart from './components/cart/Cart';
+import Header from "./components/header/Header";
 import { Route } from 'react-router-dom';
+
 
 class App extends React.Component {
 
