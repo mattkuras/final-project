@@ -17,6 +17,13 @@ class ItemsController < ApplicationController
         end
     end
 
+    def destroy 
+   
+        @item = Item.all.find_by(id: params[:id])
+        @item.destroy 
+        render json: @item 
+    end 
+
     private
 
     def item_params
