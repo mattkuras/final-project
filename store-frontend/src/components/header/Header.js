@@ -2,18 +2,19 @@ import React, { Component } from 'react'
 import {Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux';
 import { Link } from "react-router-dom";
+import '../guitars/guitars.css'
 
 const Header = (props) => {
 
         return(
-            <header>
+            <header className='head'>
                 <nav>
                     <ul>
-                        <li>
+                        <li className='headli'>
                             <Link to='/cart'>Cart</Link>
                         </li>
-                        <li>
-                            <Link to='/guitars'>Guitars</Link>
+                        <li className='headli'>
+                            <Link to='/'>Guitars</Link>
                         </li>
                     </ul>
                 </nav>

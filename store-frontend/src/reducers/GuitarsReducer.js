@@ -7,28 +7,40 @@ export default function guitarsReducer(
         },
         action
         ){
+           
+        
 
     switch(action.type){
         case 'FETCH_GUITARS':
             return {
                 ...state,
-                guitars: action.payload,
+                guitars: action.payload
                 
             }
         case 'FETCH_ITEMS':
+     
             return { 
                 ...state, 
                 cart: action.payload, 
-                
+                cartTotalItems: state.cart.length,
+                cartTotalPrice: ''
             }
+  
         case 'ADD_ITEM':
             return {
-                ...state,
-                cartTotalItems: state.cart.length += 1,
-                cartTotalPrice: state.cartTotalPrice + action.payload.price,
-                guitars: [...state.guitars],
-                // cart: [...state.cart, action.payload]
+                ...state,      
+                cart: [...state.cart, action.payload],
+                cartTotalItems: state.cart.length,
+                cartTotalPrice: state.cartTotalPrice + action.payload.price
           }
+          case 'REMOVE_ITEM':
+              return {
+                  ...state,
+                  
+                  cart: state.cart.filter(item => item.id !== action.payload.id),
+                  cartTotalItems: state.cart.length,
+                  cartTotalPrice: state.cartTotalPrice - action.payload.price
+              }
         default: 
             return state
     }

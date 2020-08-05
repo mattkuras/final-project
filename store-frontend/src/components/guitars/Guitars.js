@@ -1,9 +1,9 @@
 import React from 'react'
-import Guitar from './Guitar'
+import Guitar from '../guitar/Guitar'
 import {Route, Link} from 'react-router-dom'
 import {connect} from 'react-redux';
-import {addItem} from '../actions/addItem'
-
+import {addItem} from '../../actions/addItem'
+import './guitars.css'
 
 const Guitars = (props) => {
 
@@ -11,15 +11,15 @@ const Guitars = (props) => {
         <div className='container'>
 
             {props.guitars.map(guitar => 
-            <li key={guitar.id}>
-                <div className='guitarCard'>
+            // <li >
+                <div className='guitarCard' key={guitar.id}>
                     <img className='guitarImage' src={guitar.image}/>
-                    <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> <br></br><br></br>
+                    <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> 
+                
+                <button className='addButton' onClick={(event) => props.addItem(guitar)} >add to cart</button>
                 </div>
-
-                <Link to={`/guitars/${guitar.id}`}>{guitar.name}</Link> <br></br><br></br>
-                <button onClick={(event) => props.addItem(guitar)} >add to cart</button>
-            </li>)}
+            // </li>
+            )}
 
             
         </div> 
