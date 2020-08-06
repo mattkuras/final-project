@@ -18,13 +18,12 @@ export default function guitarsReducer(
                 
             }
         case 'FETCH_ITEMS':
-     
-            return { 
-                ...state, 
-                cart: action.payload, 
-                cartTotalItems: state.cart.length,
-                cartTotalPrice: ''
-            }
+    
+           return { ...state, 
+            cart: action.payload, 
+            cartTotalItems: state.cart.length,
+            cartTotalPrice: ""
+           }
   
         case 'ADD_ITEM':
             return {

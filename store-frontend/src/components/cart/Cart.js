@@ -8,8 +8,19 @@ import './cart.css'
 
 class Cart extends React.Component {
 
+    constructor(){
+        super()
+        this.state = {
+            itemsAmount: 0
+             }
+    }
+
+
+ 
     componentDidMount(){
+        
         this.props.fetchItems()
+        
     }
 
     // useEffect(() => {
@@ -18,7 +29,9 @@ class Cart extends React.Component {
 
 
     render(){
+       
         return(
+
             <div>
                 <h1 className="cartLabel">Cart</h1> 
                 {this.props.cart.map(item =>
@@ -27,7 +40,7 @@ class Cart extends React.Component {
                 </div>)}
                 
                 <br></br><br></br>
-                <p>{this.props.cartItems} items = ${this.props.cartPrice}</p> 
+                <p>{this.state.cartItems} items = ${this.props.cartPrice}</p> 
             </div>
         )
     }
