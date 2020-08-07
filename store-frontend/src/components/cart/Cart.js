@@ -8,13 +8,13 @@ import './cart.css'
 
 class Cart extends React.Component {
 
-    constructor(props){
-        super()
-        this.state = {
-            itemsAmount: 0,
-            itemsPrice: 0
-             }
-    }
+    // constructor(props){
+    //     super()
+    //     this.state = {
+    //         itemsAmount: 0,
+    //         itemsPrice: 0
+    //          }
+    // }
 
     
  
@@ -23,10 +23,6 @@ class Cart extends React.Component {
         this.props.fetchItems()
     }
 
-
-    // useEffect(() => {
-
-    // },[])
 
 
     render(){

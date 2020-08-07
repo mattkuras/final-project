@@ -9,7 +9,7 @@ const Footer = (props) => {
                     <div className='footer-row'>
                         <div className='footer-col'>
                             <h2>Guitar Store</h2>
-                                <ul>
+                                <ul className='foot-list'>
                                     <li>342-555-5656</li>
                                     <li>Moscorw, Russia</li> 
                                     <li>123, park ave</li> 
@@ -17,7 +17,7 @@ const Footer = (props) => {
                             </div>
                             <div className='footer-col'>
                             <h2>Stuff</h2>
-                                <ul>
+                                <ul className='foot-list'>
                                     <li>GuitarStore.inc</li>
                                     <li>Contact</li> 
                                     <li>FAQ's</li> 
@@ -25,7 +25,7 @@ const Footer = (props) => {
                             </div>
                             <div className='footer-col'>
                             <h2>Follow Us</h2>
-                                <ul>
+                                <ul className='foot-list'>
                                     <li>Twitter</li>
                                     <li>Facebook</li> 
                                     <li>Instagram</li> 

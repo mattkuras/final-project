@@ -7,9 +7,13 @@
 
 .footer-row {
     float: left;
-}
+ }
 
 .footer-col {
     float: left;
-    justify-content: center;
+    justify-content: left; 
+}
+
+.foot-list {
+    justify-content: left;
 }
