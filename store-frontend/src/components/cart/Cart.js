@@ -8,20 +8,21 @@ import './cart.css'
 
 class Cart extends React.Component {
 
-    constructor(){
+    constructor(props){
         super()
         this.state = {
-            itemsAmount: 0
+            itemsAmount: 0,
+            itemsPrice: 0
              }
     }
 
-
+    
  
     componentDidMount(){
         
         this.props.fetchItems()
-        
     }
+
 
     // useEffect(() => {
 
@@ -29,7 +30,7 @@ class Cart extends React.Component {
 
 
     render(){
-       
+
         return(
 
             <div>
@@ -38,11 +39,12 @@ class Cart extends React.Component {
                 <div className='cart-item' key={item.id}> {item.guitar ? <img className='cart-image' src={item.guitar.image}/> : <Redirect to='/guitars'/>} {item.guitar ? item.guitar.name : <Redirect to='/guitars'/>} - ${item.guitar ? item.guitar.price : <Redirect to='/cart'/>}
                 <button className='cart-button' onClick={(event) => this.props.removeItem(item.id)}>remove from cart</button>
                 </div>)}
-                
+
                 <br></br><br></br>
-                <p>{this.state.cartItems} items = ${this.props.cartPrice}</p> 
+                {/* <p>{this.props.cartItems} items = ${this.props.cartPrice}</p>  */}
             </div>
         )
+        
     }
 }
 

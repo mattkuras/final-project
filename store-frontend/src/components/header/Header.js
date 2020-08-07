@@ -12,10 +12,13 @@ const Header = (props) => {
                     <ul>
                         <li className='headli'>
                             <Link to='/cart'>Cart</Link>
-                        </li>    
+                        </li>
                         <li className='headli'>
                             <Link to='/'>Guitars</Link>
                         </li>
+                        <li className='headli'>
+                            <Link to='/about'>About</Link>
+                        </li>    
                     </ul>
                 </nav>
             </header>

@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+.footer-row {
+    float: left;
+}
+
+.footer-col {
+    float: left;
+    justify-content: center;
+}

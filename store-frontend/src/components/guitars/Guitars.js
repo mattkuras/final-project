@@ -1,8 +1,5 @@
 import React from 'react'
-import Guitar from '../guitar/Guitar'
 import {Route, Link} from 'react-router-dom'
-import {connect} from 'react-redux';
-import {addItem} from '../../actions/addItem'
 import './guitars.css'
 
 const Guitars = (props) => {
@@ -25,10 +22,11 @@ const Guitars = (props) => {
         </div> 
     )
 }
-const mapStateToProps = state => {
-    return {
-        guitars: state.guitars,
+// const mapStateToProps = state => {
+//     return {
+//         guitars: state.guitars,
+//         cart: state.cart 
  
-    }
-}
-export default connect(mapStateToProps, {addItem})(Guitars)
+//     }
+// }
+export default Guitars

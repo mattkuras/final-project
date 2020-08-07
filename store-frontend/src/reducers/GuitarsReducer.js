@@ -21,24 +21,24 @@ export default function guitarsReducer(
     
            return { ...state, 
             cart: action.payload, 
-            cartTotalItems: state.cart.length,
-            cartTotalPrice: ""
+            cartTotalItems: state.cart.length
            }
   
         case 'ADD_ITEM':
+            let amount = state.cartTotalPrice + action.payload.price
             return {
                 ...state,      
-                cart: [...state.cart, action.payload],
-                cartTotalItems: state.cart.length,
-                cartTotalPrice: state.cartTotalPrice + action.payload.price
+                 cart: [...state.cart, action.payload],
+                // cartTotalItems: state.cart.length,
+                cartTotalPrice: {...state.cartTotalPrice, amount}
           }
           case 'REMOVE_ITEM':
               return {
                   ...state,
                   
                   cart: state.cart.filter(item => item.id !== action.payload.id),
-                  cartTotalItems: state.cart.length,
-                  cartTotalPrice: state.cartTotalPrice - action.payload.price
+                  cartTotalItems: state.cart.length
+                //   cartTotalPrice: [state.cartTotalPrice] - action.payload.price
               }
         default: 
             return state

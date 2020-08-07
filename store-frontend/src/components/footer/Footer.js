@@ -1,0 +1,41 @@
+import React, { Component } from 'react'
+import './footer.css'
+
+const Footer = (props) => {
+   
+        return(
+            <div className='footer'>
+                <div className='footer-container'>
+                    <div className='footer-row'>
+                        <div className='footer-col'>
+                            <h2>Guitar Store</h2>
+                                <ul>
+                                    <li>342-555-5656</li>
+                                    <li>Moscorw, Russia</li> 
+                                    <li>123, park ave</li> 
+                                </ul>
+                            </div>
+                            <div className='footer-col'>
+                            <h2>Stuff</h2>
+                                <ul>
+                                    <li>GuitarStore.inc</li>
+                                    <li>Contact</li> 
+                                    <li>FAQ's</li> 
+                                </ul>
+                            </div>
+                            <div className='footer-col'>
+                            <h2>Follow Us</h2>
+                                <ul>
+                                    <li>Twitter</li>
+                                    <li>Facebook</li> 
+                                    <li>Instagram</li> 
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+         )
+    }
+
+
+export default Footer

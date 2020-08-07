@@ -4,8 +4,9 @@ import {fetchGuitars} from './actions/fetchGuitars'
 import GuitarsContainer from './containers/GuitarsContainer'
 import Cart from './components/cart/Cart';
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import { Route } from 'react-router-dom';
-
+import About from './components/about'
 
 class App extends React.Component {
 
@@ -17,6 +18,8 @@ class App extends React.Component {
         <Header/>
         <GuitarsContainer/>
          <Route exact path='/cart' component={Cart} />
+         <Route exact path ='/about' component= {About} />
+         <Footer />
       </div>
     )
   }

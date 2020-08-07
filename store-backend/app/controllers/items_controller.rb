@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
         @item = Item.new(guitar_id: params[:id], cart_id: 1)
         
         if @item.save 
-            render json: @item.guitar 
+            render json: @item
         else 
             render json: {error: 'error saving item'}
         end
