@@ -25,12 +25,11 @@ export default function guitarsReducer(
            }
   
         case 'ADD_ITEM':
-            let amount = state.cartTotalPrice + action.payload.price
             return {
                 ...state,      
                  cart: [...state.cart, action.payload],
                 // cartTotalItems: state.cart.length,
-                cartTotalPrice: {...state.cartTotalPrice, amount}
+                cartTotalPrice: action.payload.price 
           }
           case 'REMOVE_ITEM':
               return {

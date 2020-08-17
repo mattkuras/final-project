@@ -1,19 +1,15 @@
-.footer {
+footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 0 auto;
     margin-top: 10%;
+    border-top: 2px solid #ccc
 }
-
-
-.footer-row {
-    float: left;
- }
 
 .footer-col {
-    float: left;
-    justify-content: left; 
-}
-
-.foot-list {
-    justify-content: left;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

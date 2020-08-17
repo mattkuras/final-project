@@ -4,9 +4,7 @@ import './footer.css'
 const Footer = (props) => {
    
         return(
-            <div className='footer'>
-                <div className='footer-container'>
-                    <div className='footer-row'>
+            <footer>
                         <div className='footer-col'>
                             <h2>Guitar Store</h2>
                                 <ul className='foot-list'>
@@ -31,9 +29,7 @@ const Footer = (props) => {
                                     <li>Instagram</li> 
                                 </ul>
                             </div>
-                    </div>
-                </div>
-            </div>
+            </footer>
          )
     }
 

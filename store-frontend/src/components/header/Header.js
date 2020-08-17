@@ -9,7 +9,7 @@ const Header = (props) => {
         return(
             <header className='head'>
                 <nav>
-                    <ul>
+                    <ul className='header-ul'>
                         <li className='headli'>
                             <Link to='/cart'>Cart</Link>
                         </li>

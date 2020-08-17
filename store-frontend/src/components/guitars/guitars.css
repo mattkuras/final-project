@@ -42,7 +42,7 @@
     color: black
 }
 
-li {
+.headli {
     list-style: none;
     text-decoration: none;
 }
@@ -54,7 +54,7 @@ link {
     text-decoration: none;
 }
 
-ul {
+.header-ul {
     text-decoration: none;
     flex: row;
     flex-direction: left;
