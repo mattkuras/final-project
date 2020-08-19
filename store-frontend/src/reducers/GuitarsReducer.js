@@ -1,14 +1,12 @@
 export default function guitarsReducer(
     state = {
         guitars: [],
-        cartTotalItems: 0,
         cartTotalPrice: 0,
         cart: []
         },
         action
         ){
            
-        
 
     switch(action.type){
         case 'FETCH_GUITARS':
@@ -20,24 +18,23 @@ export default function guitarsReducer(
         case 'FETCH_ITEMS':
     
            return { ...state, 
-            cart: action.payload, 
-            cartTotalItems: state.cart.length
+            cart: action.payload
            }
   
         case 'ADD_ITEM':
+            const price = action.payload.guitar.price
             return {
                 ...state,      
                  cart: [...state.cart, action.payload],
-                // cartTotalItems: state.cart.length,
-                cartTotalPrice: action.payload.price 
+                cartTotalPrice: state.cartTotalPrice + price
           }
           case 'REMOVE_ITEM':
+            const removalPrice = action.payload.guitar.price
               return {
                   ...state,
                   
                   cart: state.cart.filter(item => item.id !== action.payload.id),
-                  cartTotalItems: state.cart.length
-                //   cartTotalPrice: [state.cartTotalPrice] - action.payload.price
+                  cartTotalPrice: state.cartTotalPrice - removalPrice
               }
         default: 
             return state

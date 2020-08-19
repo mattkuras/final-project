@@ -8,10 +8,11 @@ class ItemsController < ApplicationController
     end
 
     def create
+ 
         @item = Item.new(guitar_id: params[:id], cart_id: 1)
         
         if @item.save 
-            render json: @item
+            render json: @item, include: [:guitar]
         else 
             render json: {error: 'error saving item'}
         end
@@ -21,7 +22,7 @@ class ItemsController < ApplicationController
    
         @item = Item.all.find_by(id: params[:id])
         @item.destroy 
-        render json: @item 
+        render json: @item, include: [:guitar]
     end 
 
     private

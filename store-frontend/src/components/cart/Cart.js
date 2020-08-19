@@ -5,16 +5,16 @@ import {fetchItems} from '../../actions/fetchItems'
 import {addItem} from '../../actions/addItem'
 import {removeItem} from '../../actions/removeItem'
 import './cart.css'
-
+import Counter from '../counter'
 class Cart extends React.Component {
 
-    
- 
+
+
     componentDidMount(){
-        
         this.props.fetchItems()
-     
+        
     }
+
 
     render(){
     
@@ -26,8 +26,7 @@ class Cart extends React.Component {
                 <div className='cart-item' key={item.id}> {item.guitar ? <img className='cart-image' src={item.guitar.image}/> : <Redirect to='/guitars'/>} {item.guitar ? item.guitar.name : <Redirect to='/guitars'/>} - ${item.guitar ? item.guitar.price : <Redirect to='/cart'/>}
                 <button className='cart-button' onClick={(event) => this.props.removeItem(item.id)}>remove from cart</button>
                 </div>)}
-                <p>{this.props.cart.length} item(s) in cart </p> 
-  
+                <p>{this.props.cart.length} item(s) in cart. Your total is {this.props.cartTotal} </p> 
             </div>
            
         )
@@ -38,6 +37,7 @@ class Cart extends React.Component {
 const mapStateToProps = state => {
     return {
         cart: state.cart,
+        cartTotal: state.cartTotalPrice.toFixed(2)
     }
 }
 
