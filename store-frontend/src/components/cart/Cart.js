@@ -5,7 +5,6 @@ import {fetchItems} from '../../actions/fetchItems'
 import {addItem} from '../../actions/addItem'
 import {removeItem} from '../../actions/removeItem'
 import './cart.css'
-import Counter from '../counter'
 class Cart extends React.Component {
 
 
