@@ -2,7 +2,7 @@ export const removeItem = (data) => {
   
 
     return(dispatch) => {
-        fetch(`http://localhost:3001/items/${data}`, {
+        fetch(`https://guitar-store-backend.herokuapp.com/${data}`, {
             method: 'DELETE'
         })
         .then(resp => resp.json())

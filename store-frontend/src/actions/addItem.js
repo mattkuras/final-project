@@ -1,6 +1,6 @@
 export const addItem = (data) => {
     return(dispatch) => {
-        fetch('http://localhost:3001/items', {
+        fetch('https://guitar-store-backend.herokuapp.com/items', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

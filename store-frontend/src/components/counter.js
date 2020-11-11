@@ -15,7 +15,7 @@ class Counter extends React.Component {
 
         console.log('a')
 
-        fetch("http://localhost:3001/guitarsfdjskljflds")
+        fetch("https://guitar-store-backend.herokuapp.com/guitars")
             .then(resp => {
                 if(resp.status !== 200) {
                     throw new Error(resp.statusText);

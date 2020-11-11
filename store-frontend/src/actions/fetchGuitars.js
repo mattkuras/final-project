@@ -1,6 +1,6 @@
 export function fetchGuitars(action){
     return (dispatch) => {
-        fetch("http://localhost:3001/guitars")
+        fetch("https://guitar-store-backend.herokuapp.com/guitars")
         .then(resp => resp.json())
         .then(data => dispatch({
             
